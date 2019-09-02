@@ -4,6 +4,9 @@ angular.module('copayApp.filters', [])
   .filter('amTimeAgo', ['amMoment',
     function(amMoment) {
       return function(input) {
+        // console.log(amMoment.preprocessDate(input).fromNow(), 'am Moment moment?');
+        // console.log(moment(input).fromNow(), 'plain Moment way?');
+        //console.log(moment(input).format('DD MM YYYY kk'), 'moment format');
         return amMoment.preprocessDate(input).fromNow();
       };
     }

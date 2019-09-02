@@ -1381,6 +1381,10 @@ angular.module('copayApp.controllers').controller('indexController', function($r
 	        if (walletId ==  profileService.focusedClient.credentials.walletId) {
 	            self.completeHistory = newHistory;
 	            self.txHistory = newHistory.slice(0, self.historyShowLimit);
+	            let date = new Date(2019, 7, 29, 23, 50, 50, 0);
+	            console.log(date, 'date of my pc');
+	            console.log(moment(date).fromNow(),'moment date ?');
+	            // console.log(new Date((self.txHistory[0].time * 1000)), 'moment');
 	            self.historyShowShowAll = newHistory.length >= self.historyShowLimit;
 	        }
 
